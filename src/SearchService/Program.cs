@@ -3,6 +3,7 @@ using MongoDB.Driver;
 using MongoDB.Entities;
 using Polly;
 using Polly.Extensions.Http;
+using RabbitMQ.Client;
 using SearchService.Consumers;
 using SearchService.Data;
 using SearchService.Models;
@@ -26,6 +27,18 @@ builder.Services.AddMassTransit(x =>
                         e.UseMessageRetry(r => r.Interval(5, 5));
 
                         e.ConfigureConsumer<AuctionCreatedConsumer>(context);
+                });
+
+                cfg.ReceiveEndpoint("female-customer", e =>
+                {
+                        e.ConfigureConsumeTopology = false;
+                        e.Consumer<CustomerCreatedConsumer>();
+
+                        e.Bind("customerEvent", b =>
+                        {
+                                b.RoutingKey = "Female";
+                                b.ExchangeType = ExchangeType.Direct;
+                        });
                 });
                 cfg.ConfigureEndpoints(context);
         });

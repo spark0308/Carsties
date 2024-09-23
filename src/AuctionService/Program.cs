@@ -4,6 +4,7 @@ using AuctionService.Entities;
 using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using RabbitMQ.Client;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,6 +30,21 @@ builder.Services.AddMassTransit(x =>
 
     x.UsingRabbitMq((context, cfg) =>
     {
+        cfg.ReceiveEndpoint("male-customer", e => 
+        {
+            e.ConfigureConsumeTopology = false;
+
+            e.Consumer<CustomerCreatedConsumer>();
+            
+            e.Bind("customerEvent", b =>
+            {
+                b.RoutingKey = "Male";
+                b.ExchangeType = ExchangeType.Direct;
+            });
+
+
+        });
+
         cfg.ConfigureEndpoints(context);
     });
 });
