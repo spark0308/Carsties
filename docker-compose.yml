@@ -7,6 +7,9 @@ services:
       - 5432:5432
     volumes:
       - /var/lib/postgresql/data
+    networks:
+      - graylog-network
+
   mongodb:
     image: mongo
     environment:
@@ -16,8 +19,63 @@ services:
       - 27017:27017
     volumes:
       - /var/lib/mongodb/data
+    networks:
+      - graylog-network
+
+  mongodb2:
+    image: mongo
+    ports:
+      - 27000:27017
+    networks:
+      - graylog-network
+
   rabbitmq:
     image: rabbitmq:3-management-alpine
     ports:
       - 5672:5672
       - 15672:15672
+    networks:
+      - graylog-network
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.10.2
+    environment:
+      - discovery.type=single-node
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+    ports:
+      - 9200:9200
+      - 9300:9300
+    volumes:
+      - es_data:/usr/share/elasticsearch/data
+    networks:
+      - graylog-network
+
+  graylog:
+    image: graylog/graylog:4.3
+    environment:
+      - GRAYLOG_PASSWORD_SECRET=somesecretpassword   # Change this value
+      - GRAYLOG_ROOT_USERNAME=admin
+      - GRAYLOG_ROOT_PASSWORD_SHA2:"8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"   # Use a SHA-256 hashed password
+      - GRAYLOG_HTTP_EXTERNAL_URI=http://127.0.0.1:9000/
+      - GRAYLOG_ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+      - GRAYLOG_MONGODB_URI=mongodb://mongodb2:27017/graylog
+    depends_on:
+      - mongodb2
+      - elasticsearch
+    ports:
+      - 9000:9000   # Graylog web interface
+      - 12201:12201/udp
+    volumes:
+      - graylog_data:/usr/share/graylog/data
+    networks:
+      - graylog-network
+
+volumes:
+  es_data:
+    driver: local
+  graylog_data:
+    driver: local
+
+networks:
+  graylog-network:
+    driver: bridge
