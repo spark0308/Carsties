@@ -88,6 +88,7 @@ export default function Filters() {
         <ButtonGroup>
           {pageSizeButtons.map((value, i) => (
             <Button
+              key={value}
               onClick={() => setParams({ pageSize: value })}
               color={`${pageSize === value ? "red" : "gray"}`}
               className="focus:ring-0"

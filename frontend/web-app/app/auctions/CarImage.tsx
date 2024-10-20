@@ -16,7 +16,7 @@ export default function CarImage({ auction }: Props) {
       src={auction.imageUrl}
       alt={`Image of ${auction.make} ${auction.model} in ${auction.color}`}
       fill
-      // priority
+      priority
       className={`
             object-cover group-hover:opacity-75 duration-700 ease-in-out
             ${

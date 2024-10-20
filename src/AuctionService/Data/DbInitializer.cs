@@ -39,7 +39,7 @@ public class DbInitializer
                     Color = "White",
                     Mileage = 50000,
                     Year = 2020,
-                    ImageUrl = "https://cdn.pixabay.com/photo/2016/05/06/16/32/car-1376190_960_720.jpg"
+                    ImageUrl = "https://images.unsplash.com/photo-1575732905607-3d12d01218bf"
                 }
             },
             // 2 Bugatti Veyron
@@ -57,7 +57,7 @@ public class DbInitializer
                     Color = "Black",
                     Mileage = 15035,
                     Year = 2018,
-                    ImageUrl = "https://cdn.pixabay.com/photo/2012/05/29/00/43/car-49278_960_720.jpg"
+                    ImageUrl = "https://images.unsplash.com/photo-1672658074939-16cd8cc3e414"
                 }
             },
             // 3 Ford mustang
@@ -74,7 +74,7 @@ public class DbInitializer
                     Color = "Black",
                     Mileage = 65125,
                     Year = 2023,
-                    ImageUrl = "https://cdn.pixabay.com/photo/2012/11/02/13/02/car-63930_960_720.jpg"
+                    ImageUrl = "https://images.unsplash.com/photo-1678826537247-fc1e60fbda51"
                 }
             },
             // 4 Mercedes SLK
@@ -92,7 +92,7 @@ public class DbInitializer
                     Color = "Silver",
                     Mileage = 15001,
                     Year = 2020,
-                    ImageUrl = "https://cdn.pixabay.com/photo/2016/04/17/22/10/mercedes-benz-1335674_960_720.png"
+                    ImageUrl = "https://images.unsplash.com/photo-1698856712682-c32bcd1f7ecb"
                 }
             },
             // 5 BMW X1
@@ -110,7 +110,7 @@ public class DbInitializer
                     Color = "White",
                     Mileage = 90000,
                     Year = 2017,
-                    ImageUrl = "https://cdn.pixabay.com/photo/2017/08/31/05/47/bmw-2699538_960_720.jpg"
+                    ImageUrl = "https://images.unsplash.com/photo-1677517859847-0e750bfd13a9"
                 }
             },
             // 6 Ferrari spider
@@ -128,7 +128,7 @@ public class DbInitializer
                     Color = "Red",
                     Mileage = 50000,
                     Year = 2015,
-                    ImageUrl = "https://cdn.pixabay.com/photo/2017/11/09/01/49/ferrari-458-spider-2932191_960_720.jpg"
+                    ImageUrl = "https://images.unsplash.com/photo-1567725925717-c97179625db9"
                 }
             },
             // 7 Ferrari F-430
@@ -146,7 +146,7 @@ public class DbInitializer
                     Color = "Red",
                     Mileage = 5000,
                     Year = 2022,
-                    ImageUrl = "https://cdn.pixabay.com/photo/2017/11/08/14/39/ferrari-f430-2930661_960_720.jpg"
+                    ImageUrl = "https://images.unsplash.com/photo-1629323487410-c1abe62ea9ba"
                 }
             },
             // 8 Audi R8
@@ -160,10 +160,10 @@ public class DbInitializer
                 {
                     Make = "Audi",
                     Model = "R8",
-                    Color = "White",
+                    Color = "Yellow",
                     Mileage = 10050,
                     Year = 2021,
-                    ImageUrl = "https://cdn.pixabay.com/photo/2019/12/26/20/50/audi-r8-4721217_960_720.jpg"
+                    ImageUrl = "https://images.unsplash.com/photo-1623659249629-32fe9faf8b58"
                 }
             },
             // 9 Audi TT
@@ -181,7 +181,7 @@ public class DbInitializer
                     Color = "Black",
                     Mileage = 25400,
                     Year = 2020,
-                    ImageUrl = "https://cdn.pixabay.com/photo/2016/09/01/15/06/audi-1636320_960_720.jpg"
+                    ImageUrl = "https://images.unsplash.com/photo-1624302953803-f31ad7a91572"
                 }
             },
             // 10 Ford Model T
@@ -196,10 +196,10 @@ public class DbInitializer
                 {
                     Make = "Ford",
                     Model = "Model T",
-                    Color = "Rust",
+                    Color = "Green",
                     Mileage = 150150,
                     Year = 1938,
-                    ImageUrl = "https://cdn.pixabay.com/photo/2017/08/02/19/47/vintage-2573090_960_720.jpg"
+                    ImageUrl = "https://images.unsplash.com/photo-1563137391-0030ae24bc35"
                 }
             }
         };
