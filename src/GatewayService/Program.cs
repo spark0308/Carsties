@@ -26,8 +26,9 @@ var app = builder.Build();
 
 app.UseCors();
 
+app.MapReverseProxy();
+
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapReverseProxy();
 app.Run();
