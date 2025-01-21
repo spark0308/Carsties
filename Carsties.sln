@@ -19,6 +19,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiddingService", "src\Biddi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationService", "src\NotificationService\NotificationService.csproj", "{2267841C-196F-4FA7-9196-0079FA9EFFED}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5C5C3713-D60A-4C96-99C0-FDC608EC7C22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuctionService.UnitTests", "tests\AuctionService.UnitTests\AuctionService.UnitTests.csproj", "{58C6209F-69A7-4C3E-A1C4-FF4F873575CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuctionService.IntegrationTests", "tests\AuctionService.IntegrationTests\AuctionService.IntegrationTests.csproj", "{C08E8E13-941E-4D8A-A095-4861B5EEF39D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +59,14 @@ Global
 		{2267841C-196F-4FA7-9196-0079FA9EFFED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2267841C-196F-4FA7-9196-0079FA9EFFED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2267841C-196F-4FA7-9196-0079FA9EFFED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58C6209F-69A7-4C3E-A1C4-FF4F873575CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58C6209F-69A7-4C3E-A1C4-FF4F873575CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58C6209F-69A7-4C3E-A1C4-FF4F873575CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58C6209F-69A7-4C3E-A1C4-FF4F873575CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C08E8E13-941E-4D8A-A095-4861B5EEF39D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C08E8E13-941E-4D8A-A095-4861B5EEF39D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C08E8E13-941E-4D8A-A095-4861B5EEF39D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C08E8E13-941E-4D8A-A095-4861B5EEF39D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,5 +79,7 @@ Global
 		{43EA899C-AD1F-4B01-9A31-CDD5D4F62266} = {1D96AA73-E12D-415C-8CD5-5E315E5B3D34}
 		{F0E51C06-4202-49B6-9920-A52664D90B4F} = {1D96AA73-E12D-415C-8CD5-5E315E5B3D34}
 		{2267841C-196F-4FA7-9196-0079FA9EFFED} = {1D96AA73-E12D-415C-8CD5-5E315E5B3D34}
+		{58C6209F-69A7-4C3E-A1C4-FF4F873575CC} = {5C5C3713-D60A-4C96-99C0-FDC608EC7C22}
+		{C08E8E13-941E-4D8A-A095-4861B5EEF39D} = {5C5C3713-D60A-4C96-99C0-FDC608EC7C22}
 	EndGlobalSection
 EndGlobal
